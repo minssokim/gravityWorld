@@ -15,4 +15,5 @@ function draw() {
 
   ball.update();
   ball.show();
+  ball.wind();
 }

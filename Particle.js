@@ -31,7 +31,10 @@ class Particle {
       this.pos.x = 0;
     }
   }
-
+  wind(){
+    if (mouseIsPressed)
+      this.pos.x=this.pos.x+1
+  }
 
   show() {
     fill(this.c);
