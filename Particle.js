@@ -19,7 +19,11 @@ class Particle {
     this.acc.set(0, 0);
     this.checkEdge();
   }
-
+  hand(){
+    if (this.pos.x-25<mouseX <this.pos.x+25){
+     ball.addForce(hand)
+    }
+ }
 
   checkEdge() {
     if ((this.pos.y+this.w/2) > height) {//공의 위치가 세로축 중간을 넘으면
