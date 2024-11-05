@@ -13,15 +13,24 @@ function draw() {
   //let gravity = createVector(0, 0.3);
   //ball.addForce(gravity);
 
-  let hand = createVector(-mouseX/10,-mouseY/10)
-  ball.addForce(hand)
+  //let hand = createVector(-mouseX/10,-mouseY/10)
+ //ball.addForce(hand)
 
 
 
  //et wind = createVector(0.1,0);
   //ball.addForce(wind);
 
+ 
+
+
   ball.update();
   ball.show();
  // ball.wind();
+}
+function mouseClicked (){
+  let mPos=createVector(mouseX,mouseY);
+  let took = p5.VEctor.sub(ball.pos, mPos);
+  took.mult(0.1);
+  ball.addForce(took);
 }

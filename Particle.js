@@ -17,13 +17,15 @@ class Particle {
     this.pos.add(this.vel);//위치에 속도 더하기
 
     this.acc.set(0, 0);
+    this.vel.mult(o.95)
     this.checkEdge();
   }
-  hand(){
+  /*hand(){
     if (this.pos.x-25<mouseX <this.pos.x+25){
      ball.addForce(hand)
     }
  }
+    */
 
   checkEdge() {
     if ((this.pos.y+this.w/2) > height) {//공의 위치가 세로축 중간을 넘으면
@@ -35,11 +37,11 @@ class Particle {
       this.pos.x = 0;
     }
   }
-  wind(){
+ /* wind(){
     if (mouseIsPressed)
       this.pos.x=this.pos.x+1
   }
-
+*/
   show() {
     fill(this.c);
     circle(this.pos.x, this.pos.y, this.w);
